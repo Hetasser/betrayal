@@ -1,0 +1,22 @@
+div.drawer
+	div.opener
+		|CHAT
+	div.content
+		|CHAT OUVERT
+		ul#chat
+		ul#roomidul
+			label global
+			input(type="radio", name="roomid" value="global")
+			label group
+			input(type="radio", name="roomid" value="group")
+			label dialog
+			input(type="radio", name="roomid" value="dialog")
+		input#message(type="text", name="message")
+		input#userlogin(type="hidden" name="userlogin" value=user.login)
+		input#userid(type="hidden" name="userid" value=user.id)
+		button#send Send
+
+script(src='libs/jquery-1.12.0.min.js')
+script(src='libs/socket.io-1.4.5.js')
+script(src='javascripts/chat.js')
+	

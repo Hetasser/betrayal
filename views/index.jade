@@ -1,0 +1,15 @@
+if isInclude
+	extends layout
+
+block content
+	if isLoggedIn
+		include logout.jade
+		include ./panels/chat.jade
+		include ./panels/equipment.jade
+		include ./panels/profile.jade
+		include ./panels/world.jade
+		include ./panels/options.jade
+		include ./main.jade
+		script(src='javascripts/panels.js')
+	else
+		include login.jade
